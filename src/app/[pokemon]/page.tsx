@@ -27,9 +27,13 @@ export default async function Page ({ params: { pokemon } }: { params: { pokemon
       <PokemonTypeChips types={pkmDataJson.types} />
       <PokemonStats stats={pkmDataJson.stats} />
       <TypeEffectiveness types={pkmDataJson.types} />
-      <section className='flex justify-center items-center gap-8'>
-        <a className='capitalize' href={`https://bulbapedia.bulbagarden.net/wiki/${pokemonNameForBulbapedia}_(Pok%C3%A9mon)#Game_locations`} target='_blank'>{pokemon} Locations</a>
-        <a className='capitalize' href={`https://bulbapedia.bulbagarden.net/wiki/${pokemonNameForBulbapedia}_(Pok%C3%A9mon)/Generation_III_learnset#By_leveling_up`} target='_blank'>{pokemon} Moves III</a>
+      <hr className='mb-5' />
+      <section>
+        <h3 className='text-center text-2xl mb-5'>Bulbapedia links:</h3>
+        <div className='flex justify-center items-center gap-6'>
+          <a className='capitalize underline hover:no-underline' href={`https://bulbapedia.bulbagarden.net/wiki/${pokemonNameForBulbapedia}_(Pok%C3%A9mon)#Game_locations`} target='_blank'>{pokemon} Locations</a>
+          <a className='capitalize underline hover:no-underline' href={`https://bulbapedia.bulbagarden.net/wiki/${pokemonNameForBulbapedia}_(Pok%C3%A9mon)/Generation_III_learnset#By_leveling_up`} target='_blank'>{pokemon} Moves III</a>
+        </div>
       </section>
     </main>
   )
