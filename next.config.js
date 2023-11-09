@@ -3,8 +3,8 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true
-  },
-  basePath: '/emone-dex'
+  }
+  // basePath: '/emone-dex'
 }
 
 module.exports = nextConfig

@@ -5,12 +5,16 @@ const pokemons = pokemonJsonData.results
 
 export default function Home () {
   return (
-    <>
+    <main className='flex flex-wrap justify-center items-center gap-5 p-5'>
       {pokemons.map((pokemon) => (
-        <div key={pokemon.name}>
-          <p><Link href={pokemon.name}>{pokemon.name}</Link></p>
-        </div>
+        <Link
+          key={pokemon.name}
+          href={pokemon.name}
+          className='block w-32 p-2 border rounded-lg text-center capitalize bg-slate-800 hover:bg-slate-700 transition-[background-color]'
+        >
+          {pokemon.name}
+        </Link>
       ))}
-    </>
+    </main>
   )
 }

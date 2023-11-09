@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+progress.custom-progress {
+  --progress-background: #e2e8f0;
+  --progress-bar-color: black;
+
+  --progress-bar-hp-color: #FF0000;
+  --progress-bar-attack-color: #F08030;
+  --progress-bar-defense-color: #DFB91E;
+  --progress-bar-sp-attack-color: #6890F0;
+  --progress-bar-sp-defense-color: #78C850;
+  --progress-bar-speed-color: #F85888;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--progress-background);
+}
+
+progress.custom-progress::-webkit-progress-bar {
+  background-color: var(--progress-background);
+  border-radius: 99999px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress.custom-progress::-webkit-progress-value {
+  background-color: var(--progress-bar-color);
+  border-radius: 9999px;
+}
+
+progress.custom-progress::-moz-progress-bar { 
+  background-color: var(--progress-bar-color);
+  border-radius: 9999px; 
+  background-size: 35px 20px, 100% 100%, 100% 100%; 
+}
+
+progress.custom-progress.hp::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-hp-color);
+}
+
+progress.custom-progress.hp::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-hp-color);
+}
+
+progress.custom-progress.attack::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-attack-color);
+}
+
+progress.custom-progress.attack::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-attack-color);
+}
+progress.custom-progress.defense::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-defense-color);
+}
+
+progress.custom-progress.defense::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-defense-color);
+}
+progress.custom-progress.special-attack::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-sp-attack-color);
+}
+
+progress.custom-progress.special-attack::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-sp-attack-color);
+}
+
+progress.custom-progress.special-defense::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-sp-defense-color);
+}
+
+progress.custom-progress.special-defense::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-sp-defense-color);
+}
+
+progress.custom-progress.speed::-webkit-progress-value {
+  --progress-bar-color: var(--progress-bar-speed-color);
+}
+
+progress.custom-progress.speed::-moz-progress-bar { 
+  --progress-bar-color: var(--progress-bar-speed-color);
+}

@@ -5,6 +5,7 @@
   "extends": ["./node_modules/ts-standard/eslintrc.json", "next/core-web-vitals"],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off"
   }
 }
