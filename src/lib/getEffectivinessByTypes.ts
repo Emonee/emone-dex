@@ -2,8 +2,8 @@ import pokemonTypesJson from '@/resources/iii_gen_types.json'
 import { type Type } from '@/types/types'
 import { sanitizeType } from './sanitizeStrings'
 
-export function getEffectivinessByTypes (types: [Type] | [Type, Type]) {
-  const [firstType, secondType] = types.map(({ type: { name } }) => sanitizeType(name)) as [string] | [string, string]
+export function getEffectivinessByTypes (types: Type[]) {
+  const [firstType, secondType] = types.map(({ type: { name } }) => sanitizeType(name))
   const firstTypeData = pokemonTypesJson.find(type => type.name === firstType)
   if (!firstTypeData) throw new Error(`Type not found: ${firstType}`)
   const secondTypeData = secondType && pokemonTypesJson.find(type => type.name === secondType)

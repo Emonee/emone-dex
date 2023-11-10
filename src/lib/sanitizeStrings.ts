@@ -5,3 +5,7 @@ export function sanitizeType (typeName: string) {
 export function sanitizeStatName (statName: string) {
   return statName.replace('-', ' ')
 }
+
+export function capitalizeFirstLetter (string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
