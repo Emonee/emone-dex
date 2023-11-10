@@ -3,11 +3,12 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const isProduction = process.env.NODE_ENV === 'production'
 
 export const metadata: Metadata = {
   title: 'Emone Dex',
   description: 'Gen III Pokedex with pokemon type effectiviness',
-  manifest: '/site.webmanifest'
+  manifest: isProduction ? '/emone-dex/site.webmanifest' : '/site.webmanifest'
 }
 
 export default function RootLayout ({
