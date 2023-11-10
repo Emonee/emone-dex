@@ -15,8 +15,55 @@ export type GameIndex = {
 }
 
 export type Version = {
-  name: string
+  name: Name
   url: string
+}
+
+export enum Name {
+  Attack = 'attack',
+  Black = 'black',
+  Black2 = 'black-2',
+  Blue = 'blue',
+  Bug = 'bug',
+  Crystal = 'crystal',
+  Dark = 'dark',
+  Defense = 'defense',
+  Diamond = 'diamond',
+  Dragon = 'dragon',
+  Electric = 'electric',
+  Emerald = 'emerald',
+  Fairy = 'fairy',
+  Fighting = 'fighting',
+  Fire = 'fire',
+  Firered = 'firered',
+  Flying = 'flying',
+  Ghost = 'ghost',
+  Gold = 'gold',
+  Grass = 'grass',
+  Ground = 'ground',
+  HP = 'hp',
+  Heartgold = 'heartgold',
+  Ice = 'ice',
+  Leafgreen = 'leafgreen',
+  Normal = 'normal',
+  Pearl = 'pearl',
+  Platinum = 'platinum',
+  Poison = 'poison',
+  Psychic = 'psychic',
+  Red = 'red',
+  Rock = 'rock',
+  Ruby = 'ruby',
+  Sapphire = 'sapphire',
+  Silver = 'silver',
+  Soulsilver = 'soulsilver',
+  SpecialAttack = 'special-attack',
+  SpecialDefense = 'special-defense',
+  Speed = 'speed',
+  Steel = 'steel',
+  Water = 'water',
+  White = 'white',
+  White2 = 'white-2',
+  Yellow = 'yellow',
 }
 
 export type GenerationV = {
@@ -42,13 +89,13 @@ export type Versions = {
 
 export type Sprites = {
   back_default: string
-  back_female: null
+  back_female: null | string
   back_shiny: string
-  back_shiny_female: null
+  back_shiny_female: null | string
   front_default: string
-  front_female: null
+  front_female: null | string
   front_shiny: string
-  front_shiny_female: null
+  front_shiny_female: null | string
   other?: Other
   versions?: Versions
   animated?: Sprites
@@ -60,12 +107,12 @@ export type GenerationI = {
 }
 
 export type RedBlue = {
-  back_default: string
-  back_gray: string
-  back_transparent: string
-  front_default: string
-  front_gray: string
-  front_transparent: string
+  back_default: null | string
+  back_gray: null | string
+  back_transparent: null | string
+  front_default: null | string
+  front_gray: null | string
+  front_transparent: null | string
 }
 
 export type GenerationIi = {
@@ -75,22 +122,22 @@ export type GenerationIi = {
 }
 
 export type Crystal = {
-  back_default: string
-  back_shiny: string
-  back_shiny_transparent: string
-  back_transparent: string
-  front_default: string
-  front_shiny: string
-  front_shiny_transparent: string
-  front_transparent: string
+  back_default: null | string
+  back_shiny: null | string
+  back_shiny_transparent: null | string
+  back_transparent: null | string
+  front_default: null | string
+  front_shiny: null | string
+  front_shiny_transparent: null | string
+  front_transparent: null | string
 }
 
 export type Gold = {
-  back_default: string
-  back_shiny: string
-  front_default: string
-  front_shiny: string
-  front_transparent?: string
+  back_default: null | string
+  back_shiny: null | string
+  front_default: null | string
+  front_shiny: null | string
+  front_transparent?: null | string
 }
 
 export type GenerationIii = {
@@ -100,15 +147,15 @@ export type GenerationIii = {
 }
 
 export type OfficialArtwork = {
-  front_default: string
-  front_shiny: string
+  front_default: null | string
+  front_shiny: null | string
 }
 
 export type Home = {
   front_default: string
-  front_female: null
+  front_female: null | string
   front_shiny: string
-  front_shiny_female: null
+  front_shiny_female: null | string
 }
 
 export type GenerationVii = {
@@ -118,7 +165,7 @@ export type GenerationVii = {
 
 export type DreamWorld = {
   front_default: string
-  front_female: null
+  front_female: null | string
 }
 
 export type GenerationViii = {
