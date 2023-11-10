@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 export const metadata: Metadata = {
   title: 'Emone Dex',
   description: 'Gen III Pokedex with pokemon type effectiviness',
-  manifest: isProduction ? '/emone-dex/site.webmanifest' : '/dev/site.webmanifest'
+  manifest: isProduction ? '/emone-dex/site.webmanifest' : '/site.dev.webmanifest'
 }
 
 export default function RootLayout ({
