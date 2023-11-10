@@ -1,43 +1,38 @@
-## Todo
+# Emone Dex App
 
-- Hacer PWA
-- Actualizar README
-- search con url query params
-- use numbers for static params too
+This APP is a quick pokedex of the third generation of the main pokemon game series (Ruby, Saphire, Emerald, Fire red and Leaf green).
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This comes from the fact that whenever I play, searching for the data that interests me most about a Pokémon in Encyclopedias is usually very slow. Now I can search for Pokémon very quickly and see their main characteristics!
+
+Any idea of what information to add or new features is welcome.
+
+Gotta catch 'em all!
+
+## Requirements
+
+- A maintened version of Node. For detailed NextJs requirements visit: https://nextjs.org/docs/getting-started/installation
 
 ## Getting Started
 
-First, run the development server:
+Clone the projext and install the dependencies:
+
+```bash
+git clone git@github.com:Emonee/emone-dex.git
+cd emone-dex
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Todo
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Update Readme
+- [ ] Feat: Search by types
