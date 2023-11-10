@@ -2,7 +2,7 @@
   "name": "Emone Dex App",
   "short_name": "EmoneDex",
   "description": "Gen III Pokedex with pokemon type effectiviness",
-  "start_url": "/",
+  "start_url": "/emone-dex",
   "display": "standalone",
   "theme_color": "#0f172a",
   "background_color": "#0f172a",
