@@ -17,12 +17,12 @@ const MAX_VALUES_PER_STAT: { [key: string]: number } = {
 
 const StatPropgressBar: FC<StatPropgressBarType> = ({ stat: { base_stat: baseStat, stat: { name } } }) => {
   return (
-    <label className='block'>
+    <label className='block w-full'>
       <p className='capitalize italic'>{sanitizeStatName(name)}</p>
       <progress
         max={MAX_VALUES_PER_STAT[name]}
         value={baseStat}
-        className={`block ${name} custom-progress rounded-full appearance-none w-[300px] max-w-full h-5`}
+        className={`block ${name} custom-progress rounded-full appearance-none w-full h-5`}
       >
         {baseStat} / {MAX_VALUES_PER_STAT[name]}
       </progress>
