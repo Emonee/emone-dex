@@ -1,3 +1,10 @@
+## Todo
+
+- Hacer PWA
+- Actualizar README
+- search con url query params
+- use numbers for static params too
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

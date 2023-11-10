@@ -1,0 +1,36 @@
+{
+  "name": "Emone Dex App",
+  "short_name": "EmoneDex",
+  "description": "Gen III Pokedex with pokemon type effectiviness",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a",
+  "screenshots": [
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
