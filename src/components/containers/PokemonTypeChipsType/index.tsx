@@ -4,7 +4,7 @@ import { Type } from '@/types/types'
 import { type FC } from 'react'
 
 type PokemonTypeChipsType = {
-  types: [Type] | [Type, Type]
+  types: Type[]
 }
 
 const PokemonTypeChips: FC<PokemonTypeChipsType> = ({ types }) => {

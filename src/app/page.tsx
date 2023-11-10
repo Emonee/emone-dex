@@ -1,10 +1,11 @@
 'use client'
 
-import pokemonJsonData from '@/resources/pokemon_list.json'
+import pokemonJsonData from '@/resources/pkm_list.json'
+import { type Pokemon } from '@/types/types'
 import Link from 'next/link'
 import { useState } from 'react'
 
-const pokemons = pokemonJsonData.results
+const pokemons = pokemonJsonData as Pokemon[]
 
 export default function Home () {
   const [searchValue, setSearchValue] = useState('')

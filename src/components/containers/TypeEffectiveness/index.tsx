@@ -4,7 +4,7 @@ import { Type } from '@/types/types'
 import { type FC } from 'react'
 
 type TypeEffectivenessType = {
-  types: [Type] | [Type, Type]
+  types: Type[]
 }
 
 const TypeEffectiveness: FC<TypeEffectivenessType> = ({ types }) => {
