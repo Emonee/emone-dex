@@ -36,6 +36,7 @@ export default function Home () {
             <option key={type.id} value={type.name} className='capitalize'>{capitalizeFirstLetter(type.name)}</option>
           ))}
         </select>
+        <Link href='/favorites'>⭐</Link>
       </header>
       <main className='px-5 py-10'>
         <section className='flex flex-wrap justify-center items-center gap-5'>

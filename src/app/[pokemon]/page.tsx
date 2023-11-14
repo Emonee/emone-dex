@@ -1,3 +1,4 @@
+import AddFavoritePkmButton from '@/components/buttons/AddFavoritePkmButton'
 import PokemonStats from '@/components/containers/PokemonStats'
 import PokemonTypeChips from '@/components/containers/PokemonTypeChipsType'
 import TypeEffectiveness from '@/components/containers/TypeEffectiveness'
@@ -25,7 +26,8 @@ export default async function Page ({ params: { pokemon } }: { params: { pokemon
       <PokemonTypeChips types={pkmData.types} />
       <PokemonStats stats={pkmData.stats} />
       <TypeEffectiveness types={pkmData.types} />
-      <hr className='mb-5' />
+      <AddFavoritePkmButton pkm={pkmData.name} />
+      <hr className='my-5' />
       <section>
         <h3 className='text-center text-2xl mb-5'>Bulbapedia links:</h3>
         <div className='flex justify-center items-center gap-6'>
