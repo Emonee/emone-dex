@@ -188,3 +188,20 @@ export type Type = {
   slot: number
   type: Version
 }
+
+export type TypeData = {
+  damage_relations: DamageRelations
+  id: number
+  name: string
+}
+
+export type DamageRelations = {
+  double_damage_from: DamageFrom[]
+  half_damage_from: DamageFrom[]
+  no_damage_from: any[]
+}
+
+export type DamageFrom = {
+  name: string
+  url: string
+}

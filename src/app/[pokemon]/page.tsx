@@ -19,11 +19,9 @@ export default async function Page ({ params: { pokemon } }: { params: { pokemon
 
   return (
     <main className='p-5'>
-      <header className='flex justify-center items-center gap-4'>
-        <Image src={pkmData.sprites.front_default} height={96} width={96} alt={`${pokemon} sprite image`} />
-        <h2 className='capitalize text-center text-4xl my-5'><b>{pokemon}</b> <span className='text-base italic'>#{pkmData.pokedex_number}</span></h2>
-      </header>
+      <h2 className='capitalize text-center text-4xl my-5'><b>{pokemon}</b> <span className='text-base italic'>#{pkmData.pokedex_number}</span></h2>
       <PokemonTypeChips types={pkmData.types} />
+      <Image className='block mx-auto mb-3' src={pkmData.sprites.other?.['official-artwork'].front_default ?? pkmData.sprites.front_default} height={270} width={270} alt={`${pokemon} sprite image`} />
       <PokemonStats stats={pkmData.stats} />
       <TypeEffectiveness types={pkmData.types} />
       <AddFavoritePkmButton pkm={pkmData.name} />

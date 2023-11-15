@@ -10,7 +10,7 @@ type PokemonTypeChipsType = {
 const PokemonTypeChips: FC<PokemonTypeChipsType> = ({ types }) => {
   const typeNames = types.map(({ type: { name } }) => sanitizeType(name)) as [string] | [string, string]
   return (
-    <section className='flex justify-center items-center gap-3 mb-10'>
+    <section className='flex justify-center items-center gap-3 mb-5'>
       {
         typeNames[0] === typeNames[1]
           ? <TypeChip type={typeNames[0]}>{typeNames[0]}</TypeChip>

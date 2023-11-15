@@ -6,6 +6,7 @@ import { type Pokemon } from '@/types/types'
 import Link from 'next/link'
 import { useState } from 'react'
 import { capitalizeFirstLetter } from '@/lib/sanitizeStrings'
+import PkmSmallLinkCard from '@/components/cards/PkmSmallLinkCard'
 
 const pokemons = pokemonJsonData as Pokemon[]
 
@@ -14,7 +15,10 @@ export default function Home () {
   const [typeSearch, setTypeSearch] = useState('')
 
   const filteredPokemons = pokemons.filter(({ name, types }) => {
-    return name.toLowerCase().includes(searchValue.toLowerCase()) && types.some(({ type: { name } }) => typeSearch ? name === typeSearch : true)
+    return name.toLowerCase().includes(searchValue.toLowerCase()) && types.some(({ type: { name } }) => {
+      if (name === 'fairy' && typeSearch === 'normal') return true
+      return typeSearch ? name === typeSearch : true
+    })
   })
 
   return (
@@ -37,17 +41,12 @@ export default function Home () {
           ))}
         </select>
         <Link href='/favorites'>⭐</Link>
+        <Link href='/type_chart'>📊</Link>
       </header>
       <main className='px-5 py-10'>
         <section className='flex flex-wrap justify-center items-center gap-5'>
-          {filteredPokemons.map(({ name }) => (
-            <Link
-              key={name}
-              href={name}
-              className='block w-32 p-2 border rounded-lg text-center capitalize bg-slate-800 hover:bg-slate-700 transition-[background-color]'
-            >
-              {name}
-            </Link>
+          {filteredPokemons.map(pkm => (
+            <PkmSmallLinkCard key={pkm.name} pkm={pkm} />
           ))}
         </section>
       </main>
