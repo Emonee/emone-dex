@@ -16,7 +16,7 @@ export default function PkmSmallLinkCard ({ pkm }: { pkm: Pokemon }) {
         {typeNames[0] === typeNames[1]
           ? <Image src={`${(isProduction && '/emone-dex') || ''}/images/type_icons/${typeNames[0]}_icon.png`} height={20} width={20} alt={`${typeNames[0]} icon`} />
           : typeNames.map(name => (
-            <Image key={name} src={`/images/type_icons/${name}_icon.png`} height={20} width={20} alt={`${name} icon`} />
+            <Image key={name} src={`${(isProduction && '/emone-dex') || ''}/images/type_icons/${name}_icon.png`} height={20} width={20} alt={`${name} icon`} />
           ))}
       </div>
     </Link>
