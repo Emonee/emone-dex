@@ -8,8 +8,8 @@ export default function TypeChartTable () {
   return (
     <table className='block bg-slate-800 mx-auto w-fit'>
       <tbody className='text-sm'>
-        <tr className='sticky top-0'>
-          <th className='sticky left-0 z-auto p-3 bg-slate-800'><div className='w-[20px] h-[20px]' /></th>
+        <tr className='sticky top-0 z-10'>
+          <th className='sticky left-0 p-3 bg-slate-800'><div className='w-[20px] h-[20px]' /></th>
           {types.map(({ name }) => (
             <th key={name} className='bg-slate-800 p-3 capitalize'>
               <Image className='mx-auto' src={`${isProduction ? '/emone-dex' : ''}/images/type_icons/${name}_icon.png`} height={20} width={20} alt={`${name} icon`} />
