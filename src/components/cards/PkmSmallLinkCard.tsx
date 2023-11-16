@@ -5,11 +5,10 @@ import Link from 'next/link'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-export default function PkmSmallLinkCard ({ pkm }: { pkm: Pokemon }) {
+export default function PkmSmallLinkCard ({ pkm, hidden = false }: { pkm: Pokemon, hidden?: boolean }) {
   const typeNames = pkm.types.map(({ type: { name } }) => sanitizeType(name)) as [string] | [string, string]
-
   return (
-    <Link href={`/${pkm.name}`} className='flex items-center gap-4 bg bg-slate-800 hover:bg-slate-700 rounded-lg transition-[background-color] w-[350px] p-2'>
+    <Link href={`/${pkm.name}`} className={`flex items-center gap-4 bg bg-slate-800 hover:bg-slate-700 rounded-lg transition-[background-color] w-[350px] p-2 ${hidden ? 'hidden' : ''}`}>
       <Image src={pkm.sprites.front_default} height={68} width={68} alt={`${pkm.name} sprite image`} />
       <p className='text-xl capitalize'>{pkm.name}</p>
       <div className='flex flex-col justify-center items-center ml-auto gap-3'>

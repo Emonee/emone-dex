@@ -14,12 +14,12 @@ export default function Home () {
   const [searchValue, setSearchValue] = useState('')
   const [typeSearch, setTypeSearch] = useState('')
 
-  const filteredPokemons = pokemons.filter(({ name, types }) => {
-    return name.toLowerCase().includes(searchValue.toLowerCase()) && types.some(({ type: { name } }) => {
+  function pokemonIsHidden (pkm: Pokemon) {
+    return !pkm.name.toLowerCase().includes(searchValue.toLowerCase()) || !pkm.types.some(({ type: { name } }) => {
       if (name === 'fairy' && typeSearch === 'normal') return true
       return typeSearch ? name === typeSearch : true
     })
-  })
+  }
 
   return (
     <>
@@ -41,13 +41,11 @@ export default function Home () {
           ))}
         </select>
         <Link href='/favorites'>⭐</Link>
-        <Link href='/type_chart'>📊</Link>
+        {/* <Link href='/type_chart'>📊</Link> */}
       </header>
       <main className='px-5 py-10'>
         <section className='flex flex-wrap justify-center items-center gap-5'>
-          {filteredPokemons.map(pkm => (
-            <PkmSmallLinkCard key={pkm.name} pkm={pkm} />
-          ))}
+          {pokemons.map(pkm => <PkmSmallLinkCard key={pkm.name} pkm={pkm} hidden={pokemonIsHidden(pkm)} />)}
         </section>
       </main>
     </>
