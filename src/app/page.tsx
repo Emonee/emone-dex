@@ -41,7 +41,7 @@ export default function Home () {
           ))}
         </select>
         <Link href='/favorites'>⭐</Link>
-        {/* <Link href='/type_chart'>📊</Link> */}
+        <Link href='/type_chart'>📊</Link>
       </header>
       <main className='px-5 py-10'>
         <section className='flex flex-wrap justify-center items-center gap-5'>
